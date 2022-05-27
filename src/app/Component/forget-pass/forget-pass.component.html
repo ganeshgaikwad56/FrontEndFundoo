@@ -1,0 +1,28 @@
+<div fxFlex=100 fxLayout='column' fxLayoutAlign='center center' class="maincontainer">
+    <div fxLayout="column" fxLayoutAlign="center">
+        <form [formGroup]="forgotpasswordForm" (ngSubmit)="onSubmit()">
+            <div style="text-align: center;">
+                <h1>
+                    <span style="color: blue;">f</span>
+                    <span style="color: orange;">u</span>
+                    <span style="color: red;">n</span>
+                    <span style="color: green;">d</span>
+                    <span style="color: blueviolet;">o</span>
+                    <span style="color: orange;">o</span>
+                </h1>
+                <h1>Forgot Password</h1>
+                <h2>Enter your email to recover password</h2>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="centre">
+                <mat-form-field appearance="outline" fxFlex="100">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" placeholder="Enter Email">
+                    <mat-error>Valid email required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="button">
+                <button mat-flat-button color="primary" style="float: right;" routerLink="/resetpassword">Next</button>
+            </div>
+        </form>
+    </div>
+</div>

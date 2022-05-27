@@ -1,0 +1,41 @@
+<div fxFlex=100 fxLayout='column' fxLayoutAlign='center center'
+    style="padding: 60px;border:1px solid #d5d1d1;margin: 10px  30%;border: radius 2px;display:block;border-radius: 10px;">
+    <div style="margin-bottom: 16px; padding-bottom:-10px;">
+        <div fxLayout="column" fxLayoutAlign="center">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div style="text-align: center;">
+                    <h1>
+                        <span style="color: blue;">f</span>
+                        <span style="color: orange;">u</span>
+                        <span style="color: red;">n</span>
+                        <span style="color: green;">d</span>
+                        <span style="color: blueviolet;">o</span>
+                        <span style="color: orange;">o</span>
+
+                    </h1>
+                    <h1>Login</h1>
+                    <h2>Use Your FundooNote Account</h2>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="centre">
+                    <mat-form-field appearance="outline" fxFlex="100">
+                        <mat-label>Email or Phone</mat-label>
+                        <input matInput formControlName="EmailorPhone" placeholder="">
+                    </mat-form-field>
+                    <a style="margin-top: -10px; color: blue;padding-top: 5px;font-size: medium;">Forget Email?</a>
+                </div>
+                <div fxLayput="column" style="padding-top: 40px; font-size:medium">
+                    <mat-hint>Not your computer? Use Guest mode to sign in privately.</mat-hint>
+                </div>
+                <div>
+                    <mat-hint style="color: blue;font-size: medium;">Learn more</mat-hint>
+                </div>
+                <div fxLayout="row"
+                    style="justify-content: space-between; font: size 30px;padding-left:-20px;padding-top: 80px;">
+                    <button mat-stroked-button color="primary" style="border: none;font-size: medium;" routerLink="/registration">Create
+                        Account</button>
+                    <button mat-flat-button color="primary" style="float: right;">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>>
