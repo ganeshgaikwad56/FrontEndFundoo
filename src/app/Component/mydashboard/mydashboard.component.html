@@ -1,0 +1,100 @@
+<div class="example-container">
+    <mat-toolbar color="primary" class="example-toolbar" flexLayout="row" fxLayoutAlign="space-between center">
+        <div flexLayout="row" fxLayoutAlign="space-between center">
+            <button mat-icon-button (click)="snav.toggle()">
+                <mat-icon style="padding: 13px;">menu</mat-icon>
+            </button>
+            <img src="../../../assets/image/iconimg.jpeg" 
+            style="width: 40px; margin-left:8px; padding-right: 30px;">
+            <h3 class="example-app-name">
+                <span style="color: rgb(255, 187, 0);">f</span>
+                <span style="color: rgb(0, 204, 255);">u</span>
+                <span style="color: yellow;">n</span>
+                <span style="color: green;">d</span>
+                <span style="color: red;">o</span>
+                <span style="color: blue;">o</span>
+            </h3>
+        </div>
+        <div class="searchbox">
+
+            <input style="height:48px; width:790px; border:none; font-size:medium;padding-left: 10px;"
+                placeholder="search">
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div>
+                <img src="../../../assets/image/Refresh.png" 
+                style="width: 24px; margin-left:8px; padding-right: 20px;">
+            </div>
+            <div>
+                <img src="../../../assets/image/view.png" 
+                style="width: 24px; margin-left:8px; padding-right: 20px;">
+            </div>
+            <div>
+                <img src="../../../assets/image/settingicon.png"
+                    style="width: 24px; margin-left:8px; padding-right: 20px;">
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div>
+                <img src="../../../assets/image/menu.png" 
+                style="width: 24px; margin-left:8px; padding-right: 20px;">
+
+            </div>
+            <div>
+                <img src="../../../assets/image/profil2.png" style="width: 30px;">
+
+            </div>
+
+        </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" fixedTopGap="56">
+            <div>
+                <mat-nav-list fxLayout="row" fxLayoutAlign="start center">
+
+                    <a mat-list-item routerLink="./getallnotes">
+                        <mat-icon style="padding-right:20px">lightbulb</mat-icon> Notes
+                    </a>
+                </mat-nav-list>
+            </div>
+            <div>
+                <mat-nav-list fxLayout="row" fxLayoutAlign="start center">
+
+                    <a mat-list-item routerLink=".">
+                        <mat-icon style="padding-right:20px"> notifications</mat-icon> Remainders
+                    </a>
+                </mat-nav-list>
+            </div>
+            <div>
+                <mat-nav-list fxLayout="row" fxLayoutAlign="start center">
+
+                    <a mat-list-item routerLink=".">
+                        <mat-icon style="padding-right:20px">edit</mat-icon> Edit Labels
+                    </a>
+                </mat-nav-list>
+            </div>
+            <div>
+                <mat-nav-list fxLayout="row" fxLayoutAlign="start center">
+
+                    <a mat-list-item routerLink=".">
+                        <mat-icon style="padding-right:20px">archive</mat-icon> Archieve
+                    </a>
+                </mat-nav-list>
+            </div>
+            <div>
+                <mat-nav-list fxLayout="row" fxLayoutAlign="start center">
+
+                    <a mat-list-item routerLink=".">
+                        <mat-icon style="padding-right:20px">delete</mat-icon> Bin
+                    </a>
+                </mat-nav-list>
+            </div>
+
+        </mat-sidenav>
+        
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

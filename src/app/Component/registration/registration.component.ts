@@ -31,7 +31,7 @@ export class RegistrationComponent implements OnInit {
   }
   onSubmit(){
     this.submitted = true;
-    //console.log(this.registerForm.value);
+    console.log(this.registerForm.value);
 
     if(this.registerForm.valid){
       let reqdata = {
@@ -43,7 +43,7 @@ export class RegistrationComponent implements OnInit {
       this.user.registration(reqdata).subscribe((Response: any)=>{
         console.log(Response);
 
-        
+      
       });
     }
   }

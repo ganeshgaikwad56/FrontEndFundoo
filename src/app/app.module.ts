@@ -15,6 +15,18 @@ import { LoginComponent } from './Component/login/login.component';
 import { ForgetPassComponent } from './Component/forget-pass/forget-pass.component';
 import { ResetPasswordComponent } from './Component/reset-password/reset-password.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MydashboardComponent } from './Component/mydashboard/mydashboard.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import { GetallnotesComponent } from './Component/getallnotes/getallnotes.component';
+import { DisplayNotesComponent } from './Component/display-notes/display-notes.component';
+import { CreateNoteComponent } from './Component/create-note/create-note.component';
+import { NoteIconComponent } from './Component/note-icon/note-icon.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +34,12 @@ import { HttpClientModule } from '@angular/common/http';
     RegistrationComponent,
     LoginComponent,
     ForgetPassComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    MydashboardComponent,
+    GetallnotesComponent,
+    DisplayNotesComponent,
+    CreateNoteComponent,
+    NoteIconComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +49,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatButtonModule,
     MatCheckboxModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,MatToolbarModule,MatListModule,MatIconModule,MatCardModule,MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

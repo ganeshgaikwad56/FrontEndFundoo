@@ -1,8 +1,8 @@
-<div fxFlex=100 fxLayout='column' fxLayoutAlign='center center'
+<div fxFlex=100 fxFlex.xs="100" fxLayout='column' fxLayoutAlign='center center'
     style="padding: 60px;border:1px solid #d5d1d1;margin: 10px  30%;border: radius 2px;display:block;border-radius: 10px;">
-    <div style="margin-bottom: 16px; padding-bottom:-10px;">
+    <div style="margin-bottom: 16px; padding-bottom:-10px;" fxLayoutAlign="center center">
         <div fxLayout="column" fxLayoutAlign="center">
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="loginForm" fxFlex="95" (ngSubmit)="onSubmit()">
                 <div style="text-align: center;">
                     <h1>
                         <span style="color: blue;">f</span>
@@ -19,9 +19,16 @@
                 <div fxLayout="column" fxLayoutAlign="centre">
                     <mat-form-field appearance="outline" fxFlex="100">
                         <mat-label>Email or Phone</mat-label>
-                        <input matInput formControlName="EmailorPhone" placeholder="">
+                        <input matInput formControlName="email" placeholder="">
                     </mat-form-field>
-                    <a style="margin-top: -10px; color: blue;padding-top: 5px;font-size: medium;">Forget Email?</a>
+                    <!-- <a style="margin-top: -10px; color: blue;padding-top: 5px;font-size: medium;">Forget Email?</a> -->
+                </div>
+                <div fxLayout="column" fxLayoutAlign="centre">
+                    <mat-form-field appearance="outline" fxFlex="100">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="showPassword ? 'text' : 'password'" name="password" formControlName="password" placeholder="password">
+                    </mat-form-field>
+                    <a style="margin-top: -10px; color: blue;padding-top: 5px;font-size: medium;" RouterLink="/forget-pass">Forget Pssword?</a>
                 </div>
                 <div fxLayput="column" style="padding-top: 40px; font-size:medium">
                     <mat-hint>Not your computer? Use Guest mode to sign in privately.</mat-hint>
