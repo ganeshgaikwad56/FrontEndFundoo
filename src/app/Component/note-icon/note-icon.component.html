@@ -1,13 +1,18 @@
-<div fxlatout="row">
-    <img src="../../../assets/image/ghnti.png"
-     style="width: 20px; margin-left:8px; padding-right: 20px;">
-    <img src="../../../assets/image/color.png"
-     style="width: 20px; margin-left:8px; padding-right: 20px;">
-    <img src="../../../assets/image/human.png"
-     style="width: 20px; margin-left:8px; padding-right: 20px;">
-    <img src="../../../assets/image/Archive.png"
-     style="width: 20px; margin-left:8px; padding-right: 20px;">
-    <img src="../../../assets/image/more.png"
-     style="width: 20px; margin-left:8px; padding-right: 20px;">
+<div fxLayout="row">
+    <img src="../../../assets/image/ghnti.png" style="width: 20px; margin-left:8px; padding-right: 10px;">
+    <img src="../../../assets/image/color.png" style="width: 20px; margin-left:8px; padding-right: 10px;">
+    <img src="../../../assets/image/human.png" style="width: 20px; margin-left:8px; padding-right: 10px;">
+    <img src="../../../assets/image/Archive.png" style="width: 20px; margin-left:8px; padding-right: 10px;"  (click)="Archievenote()">
+     
+     
+    <button mat-button [matMenuTriggerFor]="menu"> <img src="../../../assets/image/more.png"
+            style="width: 20px; margin-left:8px; padding-right: 10px;"></button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="Deletenote()">Delete</button>
+        <button mat-menu-item>AddLable</button>
+        <button mat-menu-item>AddDrwawing</button>
+        <button mat-menu-item>ShowCheckbox</button>
+    </mat-menu>
+
     <!-- <img src="../../../assets/takeAnote/undoimg.png" style="width: 20px; margin-left:8px; padding-right: 20px;"> -->
 </div>

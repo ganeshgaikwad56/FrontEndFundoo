@@ -1,0 +1,15 @@
+<div>
+    <div style="padding-bottom: 5px;" fxLayout="row" fxLayoutAlign="space-between">
+        <input [(ngModel)]="title" type="txt" placeholder="Title" [(ngModel)]="title">
+        <img style="width: 16px;" class="img" src="../../../assets/image/pin.png">
+    </div>
+    <div style="padding-top: 5px;">
+        <input [ngModel]="description" type="txt" placeholder="take a note" [(ngModel)]="description">
+    </div>
+    <div style="padding-top:10px ;" fxLayout="row" fxLayoutAlign="space-between center">
+
+        <app-note-icon></app-note-icon>
+        <button mat-button (click)="onSubmit()" class="closebutton">Close</button>
+
+    </div>
+</div>

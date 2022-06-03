@@ -26,6 +26,14 @@ import { CreateNoteComponent } from './Component/create-note/create-note.compone
 import { NoteIconComponent } from './Component/note-icon/note-icon.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { AuthguardServiceService } from './services/AuthguardService/authguard-service.service';
+import { UpdateComponent } from './Component/update/update.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
+import { TrashnoteComponent } from './Component/deletenote/trashnote.component';
+import { GettrashComponent } from './Component/gettrash/gettrash.component';
+import { ArchieveComponent } from './Component/archieve/archieve.component';
+
 
 
 @NgModule({
@@ -39,7 +47,12 @@ import {MatExpansionModule} from '@angular/material/expansion';
     GetallnotesComponent,
     DisplayNotesComponent,
     CreateNoteComponent,
-    NoteIconComponent
+    NoteIconComponent,
+    UpdateComponent,
+
+    TrashnoteComponent,
+     GettrashComponent,
+     ArchieveComponent
   ],
   imports: [
     BrowserModule,
@@ -49,10 +62,12 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatInputModule,
     MatButtonModule,
     MatCheckboxModule,
-    HttpClientModule,
+    HttpClientModule,MatDialogModule,MatMenuModule,
     MatSidenavModule,MatToolbarModule,MatListModule,MatIconModule,MatCardModule,MatExpansionModule
   ],
-  providers: [],
+  providers: [
+    AuthguardServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,9 +9,9 @@ import { NoteService } from 'src/app/services/NoteService/note.service';
 export class GetallnotesComponent implements OnInit {
 
   constructor(private AllNote: NoteService) { }
-  list: any = [];
-  notes: any;
-  noteList: any = [];
+
+  notes: any = [];
+
 
   ngOnInit(): void {
     this.getAllNotes();
@@ -23,10 +23,13 @@ export class GetallnotesComponent implements OnInit {
 
         this.notes = response.data;
         console.log(response);
-        
+        this.notes = this.notes.filter((object: any) => {
+          return  object.isTrash === false && object.isArchieve===false;
+        })
+
       })
   }
- 
+
 }
 
 
