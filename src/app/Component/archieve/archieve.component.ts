@@ -16,8 +16,6 @@ notes:any=[];
   getarchieve() {    // Api integartion for api notes 
     this.note.getNoteList().subscribe(
       (response: any) => {
-
-
         this.notes = response.data;
         console.log(this.notes);
         this.notes = this.notes.filter((object: any) => {

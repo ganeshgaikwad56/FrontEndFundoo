@@ -33,6 +33,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { TrashnoteComponent } from './Component/deletenote/trashnote.component';
 import { GettrashComponent } from './Component/gettrash/gettrash.component';
 import { ArchieveComponent } from './Component/archieve/archieve.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -62,7 +63,7 @@ import { ArchieveComponent } from './Component/archieve/archieve.component';
     MatInputModule,
     MatButtonModule,
     MatCheckboxModule,
-    HttpClientModule,MatDialogModule,MatMenuModule,
+    HttpClientModule,MatDialogModule,MatMenuModule,MatSnackBarModule,
     MatSidenavModule,MatToolbarModule,MatListModule,MatIconModule,MatCardModule,MatExpansionModule
   ],
   providers: [

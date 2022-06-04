@@ -22,7 +22,7 @@ export class GettrashComponent implements OnInit {
         console.log(this.notes);
         this.notes = this.notes.filter((object: any) => {
           return  object.isTrash === true;
-        } )
+       } )
 
       })
   }

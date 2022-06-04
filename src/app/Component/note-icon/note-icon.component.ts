@@ -21,7 +21,7 @@ export class NoteIconComponent implements OnInit {
   Deletenote() {
     let reqdata = {
       noteID: [this.noteCard.noteId],
-      isDeleted: true,
+      isTrash: true,
       
 
     }
@@ -39,7 +39,7 @@ export class NoteIconComponent implements OnInit {
     }
     // console.log("print Req",reqdata)
     this.note.archieveNote(reqdata).subscribe((response: any) => {
-      console.log('Delete Notes', response);
+      console.log('Archive Notes', response);
       
     })
   }

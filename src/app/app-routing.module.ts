@@ -17,14 +17,14 @@ const routes: Routes = [
   {path:'registration',component:RegistrationComponent},
   {path:'forget-pass',component:ForgetPassComponent},
   {path:'reset-password/:token',component:ResetPasswordComponent},
-  {path:'mydashboard',component:MydashboardComponent,
+  {path:'mydashboard',component:MydashboardComponent,canActivate:[AuthguardnameGuard],
   children:[
     {path:'getallnotes', component:GetallnotesComponent},
     {path:'gettrash', component:GettrashComponent},
     {path:'archieve', component:ArchieveComponent}
   ]
 },
-{path:'mydashboard',component:MydashboardComponent,canActivate:[AuthguardnameGuard]}
+
 ];
 
 @NgModule({

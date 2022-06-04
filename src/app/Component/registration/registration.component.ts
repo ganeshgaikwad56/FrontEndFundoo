@@ -42,6 +42,7 @@ export class RegistrationComponent implements OnInit {
       }
       this.user.registration(reqdata).subscribe((Response: any)=>{
         console.log(Response);
+        
 
       
       });
