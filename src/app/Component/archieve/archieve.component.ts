@@ -18,6 +18,7 @@ notes:any=[];
       (response: any) => {
         this.notes = response.data;
         console.log(this.notes);
+        this.notes.reverse();
         this.notes = this.notes.filter((object: any) => {
           return  object.isArchieve === true;
         } )

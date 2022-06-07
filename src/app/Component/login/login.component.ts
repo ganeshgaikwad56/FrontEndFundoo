@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { UserserviceService } from 'src/app/services/UserService/userservice.service';
 
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
   public showPassword: boolean = false;
   users="1"
 
-  constructor(private formBuilder: FormBuilder,private user:UserserviceService,private rout:Router) { }
+  constructor(private formBuilder: FormBuilder,private user:UserserviceService,private rout:Router,
+    private snackBar:MatSnackBar) { }
 
   ngOnInit() {
     localStorage.setItem('SeesionUser',this.users) 
@@ -42,7 +44,9 @@ export class LoginComponent implements OnInit {
       this.user.login(reqdata).subscribe((Response: any)=>{
         console.log(Response);
         localStorage.setItem("token",Response.data);
-
+        this.snackBar.open('Login Successfully..!!!','..', {
+          duration: 3000,
+        })
         
       });
     }

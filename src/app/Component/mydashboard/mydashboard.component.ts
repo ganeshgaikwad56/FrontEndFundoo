@@ -26,11 +26,12 @@ export class MydashboardComponent implements OnInit {
   }
   logout(){
     localStorage.removeItem("token");
-    this.rout.navigateByUrl('/mydashboard')
+    this.rout.navigateByUrl('/login')
     console.log("logout success")
     this.snackBar.open('Logout Successfully..!!!','..', {
       duration: 3000,
     })
+    //this.rout.navigateByUrl('/login')
   }
 
 }

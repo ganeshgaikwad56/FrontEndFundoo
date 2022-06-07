@@ -11,7 +11,7 @@ export class UpdateComponent implements OnInit {
   title: any;
   description: any;
   noteID: any;
-  Colour:any;
+  colour:any;
 
 
   constructor(private note: NoteService,
@@ -21,7 +21,7 @@ export class UpdateComponent implements OnInit {
     this.title = data.title
     this.description = data.description
     this.noteID = data.noteId
-    // this.Colour=data.Colour
+    this.colour=data.colour
     console.log(this.noteID)
     console.log("print data",data)
   }
@@ -37,7 +37,7 @@ export class UpdateComponent implements OnInit {
     let reqData = {
       Title: this.title,
       Description: this.description,
-      Colour: "colourName",
+      colour: this.colour,
       IsPin:false,
       IsTrash:false,
       IsRiminder:false,
@@ -53,6 +53,7 @@ export class UpdateComponent implements OnInit {
     }, error => {
       console.log(error);
     });
+    window.location.reload();
   }
 
 }

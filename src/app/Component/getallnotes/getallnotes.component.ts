@@ -23,11 +23,17 @@ export class GetallnotesComponent implements OnInit {
 
         this.notes = response.data;
         console.log(response);
+        this.notes.reverse();
         this.notes = this.notes.filter((object: any) => {
-          return  object.isTrash === false && object.isArchieve===false;
+          return object.isTrash === false && object.isArchieve === false;
         })
 
+
       })
+  }
+  receiveMessagefromdisplaycard($event: any) {
+    console.log("insidegetallnotes", $event);
+    this.getAllNotes()
   }
 
 }
