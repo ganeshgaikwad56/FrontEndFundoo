@@ -1,5 +1,5 @@
 <div fxLayout="row" fxLayout="row wrap">
-<mat-card *ngFor="let noteArr of GetNote" [style.background]="noteArr.colour" style="width:240px;max-height:500px;background-color:aqua;margin-top: 50px; margin-left: 10px;">
+<mat-card *ngFor="let noteArr of GetNote | filter:searchword" [style.background]="noteArr.colour" style="width:240px;max-height:500px;background-color:aqua;margin-top: 50px; margin-left: 10px;">
     <div>
         <div fxLayout="row" fxLayoutAlign="space-between" class="add-note-input" (click)="openDialog(noteArr)" >
             {{noteArr.title}}
