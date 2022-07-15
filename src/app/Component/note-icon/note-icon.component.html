@@ -1,6 +1,7 @@
 <div fxLayout="row" fxLayourAlign="center">
     <div>
         <img *ngIf="!isTrash" src="../../../assets/image/ghnti.png">
+        <img *ngIf="!isTrash" src="../../../assets/image/collab.png">
         <img *ngIf="!isTrash" mat-button [matMenuTriggerFor]="colour" src="../../../assets/image/color.png">
 
         <mat-menu #colour="matMenu" yPosition="below">
@@ -23,7 +24,7 @@
     </div>
 
     <div>
-        <img *ngIf="!isTrash" mat-button [matMenuTriggerFor]="menu" src="../../../assets/image/more.png">
+        <img *ngIf="!isTrash"  [matMenuTriggerFor]="menu" src="../../../assets/image/more.png">
         <mat-menu #menu="matMenu">
             <button mat-menu-item (click)="Trash()">Trash</button>
             <button mat-menu-item>Add Label</button>

@@ -132,9 +132,15 @@ export class NoteIconComponent implements OnInit {
       noteID: [this.noteCard.noteId]
     };
 
-    this.note.colorNoteService(reqData).subscribe((res: any) => {
-      console.log(res);
+    this.note.colorNoteService(reqData).subscribe((response: any) => {
+      console.log(response);
+      this.iconstodisplay.emit(response);
+      
       console.log("color dekh", reqData)
+      this.snackBar.open('Note Coloured Successfully..!!!', '..', {
+        duration: 3000,
+      })
+      
     });
   }
   colorarray =[{Colorcode:"pink"},

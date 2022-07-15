@@ -4,8 +4,7 @@
             <button mat-icon-button (click)="snav.toggle()">
                 <mat-icon style="padding: 13px;">menu</mat-icon>
             </button>
-            <img src="../../../assets/image/iconimg.jpeg" 
-            style="width: 40px; margin-left:8px; padding-right: 30px;">
+            <img src="../../../assets/image/iconimg.jpeg" style="width: 40px; margin-left:8px; padding-right: 30px;">
             <h1 class="example-app-name">
                 <span style="color: rgb(255, 187, 0);">f</span>
                 <span style="color: rgb(0, 204, 255);">u</span>
@@ -17,17 +16,16 @@
         </div>
         <div class="searchbox">
 
-            <input (keyup)=" searchtitle($event)"  style="height:48px; width:787px; border:none; border-radius: 2px; font-size:medium;padding-left: 10px;"
+            <input (keyup)=" searchtitle($event)"
+                style="height:48px; width:787px; border:none; border-radius: 2px; font-size:medium;padding-left: 10px;"
                 placeholder="search">
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between center">
             <div>
-                <img src="../../../assets/image/Refresh.png" 
-                style="width: 24px; margin-left:8px; padding-right: 20px;">
+                <img src="../../../assets/image/Refresh.png" style="width: 24px; margin-left:8px; padding-right: 20px;">
             </div>
             <div>
-                <img src="../../../assets/image/view.png" 
-                style="width: 24px; margin-left:8px; padding-right: 20px;">
+                <img src="../../../assets/image/view.png" style="width: 24px; margin-left:8px; padding-right: 20px;">
             </div>
             <div>
                 <img src="../../../assets/image/settingicon.png"
@@ -36,12 +34,11 @@
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between center">
             <div>
-                <img src="../../../assets/image/menu.png" 
-                style="width: 24px; margin-left:8px; padding-right: 20px;">
+                <img src="../../../assets/image/menu.png" style="width: 24px; margin-left:8px; padding-right: 20px;">
 
             </div>
             <div (click)="logout()">
-                <img  src="../../../assets/image/profil2.png" style="width: 30px;">
+                <img src="../../../assets/image/profil2.png" style="width: 30px;">
 
             </div>
 
@@ -66,10 +63,18 @@
                     </a>
                 </mat-nav-list>
             </div>
+            <div *ngFor="let LabelArr of lableArray">
+                <mat-nav-list fxLayout="row" class="colour1" fxLayoutAlign="start center">
+                    <a mat-list-item>
+                        <mat-icon style="padding-right: 30px;"> labels</mat-icon>
+                        {{LabelArr.lableName}}
+                    </a>
+                </mat-nav-list>
+            </div>
             <div>
                 <mat-nav-list fxLayout="row" fxLayoutAlign="start center">
 
-                    <a mat-list-item routerLink=".">
+                    <a mat-list-item (click)="openDialog()">
                         <mat-icon style="padding-right:20px">edit</mat-icon> Edit Labels
                     </a>
                 </mat-nav-list>
@@ -78,7 +83,7 @@
                 <mat-nav-list fxLayout="row" fxLayoutAlign="start center">
 
                     <a mat-list-item routerLink="./archieve">
-                       <img style="padding-right:20px; width: 24px;" src="../../../assets/image/Archieve.png" > Archieve
+                        <img style="padding-right:20px; width: 24px;" src="../../../assets/image/Archieve.png"> Archieve
                     </a>
                 </mat-nav-list>
             </div>
@@ -92,7 +97,7 @@
             </div>
 
         </mat-sidenav>
-        
+
         <mat-sidenav-content>
             <router-outlet></router-outlet>
         </mat-sidenav-content>

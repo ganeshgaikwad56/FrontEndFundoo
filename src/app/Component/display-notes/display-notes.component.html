@@ -1,17 +1,20 @@
 <div fxLayout="row" fxLayout="row wrap">
-<mat-card *ngFor="let noteArr of GetNote | filter:searchword" [style.background]="noteArr.colour" style="width:240px;max-height:500px;background-color:aqua;margin-top: 50px; margin-left: 10px;">
-    <div>
-        <div fxLayout="row" fxLayoutAlign="space-between" class="add-note-input" (click)="openDialog(noteArr)" >
-            {{noteArr.title}}
-            <img  class="img" src="../../../assets/image/pin.png" >
-        </div> <br>
-        <div (click)="openDialog(noteArr)" style="margin-bottom: 10px; padding-bottom: 5px;">
-            {{noteArr.description}}
+    <mat-card *ngFor="let noteArr of GetNote | filter:searchword" [style.background]="noteArr.colour"
+        style="width:240px;max-height:500px;background-color:aqua;margin-top: 50px; margin-left: 10px;">
+        <div>
+            <div fxLayout="row" fxLayoutAlign="space-between" class="add-note-input" (click)="openDialog(noteArr)">
+                {{noteArr.title}}
+                <img class="img" src="../../../assets/image/pin.png">
+            </div> <br>
+            <div (click)="openDialog(noteArr)" style="margin-bottom: 10px; padding-bottom: 5px;">
+                {{noteArr.description}}
+            </div>
         </div>
-    </div>
 
-    <div>
-        <div><app-note-icon [noteCard]="noteArr"></app-note-icon></div>
-    </div>
-</mat-card>
+        <div>
+            <div>
+                <app-note-icon [noteCard]="noteArr" (iconstodisplay)="recievefromiconstodisplaycard($event)" [noteCard]="noteArr" (noteOperation)="operation($event)"></app-note-icon>
+            </div>
+        </div>
+    </mat-card>
 </div>

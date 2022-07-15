@@ -7,8 +7,8 @@ import { NoteService } from 'src/app/services/NoteService/note.service';
   styleUrls: ['./archieve.component.scss']
 })
 export class ArchieveComponent implements OnInit {
-notes:any=[];
-  constructor(private note:NoteService) { }
+  notes: any = [];
+  constructor(private note: NoteService) { }
 
   ngOnInit(): void {
     this.getarchieve()
@@ -20,10 +20,13 @@ notes:any=[];
         console.log(this.notes);
         this.notes.reverse();
         this.notes = this.notes.filter((object: any) => {
-          return  object.isArchieve === true;
-        } )
-
+          return object.isArchieve === true;
+        })
       })
   }
+  receiveMessagefromdisplaycard($event: any) {
+    console.log("insidegetallnotes", $event);
+    this.getarchieve();
 
+}
 }

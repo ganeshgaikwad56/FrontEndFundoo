@@ -1,0 +1,22 @@
+<div>
+    <span>Edit Label</span>
+    <div fxLayout="row" style="margin-top: 20px;">
+
+        <div >
+            <img *ngIf="!isLable"  (click)="hideAndShow()" src="../../../assets/image/pluss.png" alt="">
+        </div>
+        <div fxLayout="row" *ngIf="isLable">
+            <img  (click)="hideAndShow()" src="../../../assets/image/cross.png" alt="">
+            <input matInput [(ngModel)]="lableName" placeholder="Create note">
+            <img (click)=" onCreate()" src="../../../assets/image/Add.png" alt="">
+        </div>
+
+    </div>
+    <div  fxLayout="row" fxLayoutAlign="space-between end" *ngFor="let LabelArr of lableArray">
+        <img src="../../../assets/image/label.png" alt="" (mouseover)="show()" *ngIf="!isDelete">
+      <img (mouseout)="show()" *ngIf="isDelete" src="../../../assets/image/Delete.png" alt="" (click)="DeleteLabel(LabelArr.lableId)">
+      {{LabelArr.lableName}}
+        <img src="../../../assets/image/editLabel.png" alt="">
+
+    </div>
+</div>

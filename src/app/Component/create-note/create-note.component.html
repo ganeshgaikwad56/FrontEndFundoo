@@ -1,26 +1,26 @@
 <div class="shadow" fxLayoutAlign="center center" style="margin-top: 30px; margin-left: 20px; ">
-  <div style="width:700px; background-color:rgb(222, 226, 161); border-radius: 5px; box-shadow: 2px 2px rgb(169, 172, 150);">
+  <div
+    style="width:700px; background-color:rgb(222, 226, 161); border-radius: 5px; box-shadow: 2px 2px rgb(169, 172, 150);">
     <form [formGroup]="createnoteForm" (ngSubmit)="onSubmit()">
       <div style="height: 30px; padding: 10px 15px; font-size: medium;" *ngIf="show">
 
         <input type="text" #txt class="input" formControlName="title" placeholder="Title">
-        <img src="../../../assets/image/pin.png"
-           style="width: 22px; margin-left:8px; padding-left: 100px;">
-       
+        <img src="../../../assets/image/pin.png" style="width: 22px; margin-left:8px; padding-left: 100px;">
+
       </div>
       <div style="height: 30px; margin-bottom: 10px; padding: 10px 15px; font-size: medium;">
-        <input type="text" #txt class="input" formControlName="description" placeholder="Take a note..." (click)="hideAndShow()"
-          *ngIf="show || !show">
-          <img *ngIf="!show" src="../../../assets/image/checkbox.png"
-           style="width: 22px; margin-left:8px; padding-right: 20px;">
-          <img *ngIf="!show" src="../../../assets/image/brush.png"
-           style="width: 22px; margin-left:8px; padding-right: 20px;">
-          <img *ngIf="!show" src="../../../assets/image/imgs.png"
-           style="width: 22px; margin-left:8px; padding-right: 20px;">
+        <input type="text" #txt class="input" formControlName="description" placeholder="Take a note..."
+          (click)="hideAndShow()" *ngIf="show || !show">
+        <img *ngIf="!show" src="../../../assets/image/checkbox.png"
+          style="width: 22px; margin-left:8px; padding-right: 20px;">
+        <img *ngIf="!show" src="../../../assets/image/brush.png"
+          style="width: 22px; margin-left:8px; padding-right: 20px;">
+        <img *ngIf="!show" src="../../../assets/image/imgs.png"
+          style="width: 22px; margin-left:8px; padding-right: 20px;">
       </div>
       <div style="height: 35px;" *ngIf="show" fxLayout="row">
         <app-note-icon></app-note-icon>
-        <div style="position: right; padding-left: 200px;padding-top: -60px; margin-left: 60px;">
+        <div style="position: right; padding-left: 200px;padding-top: -60px; margin-left: 170px;">
           <button mat-button class="closebutton">Close</button>
         </div>
       </div>

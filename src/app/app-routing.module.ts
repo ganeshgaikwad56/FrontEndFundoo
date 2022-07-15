@@ -5,6 +5,7 @@ import { ArchieveComponent } from './Component/archieve/archieve.component';
 import { ForgetPassComponent } from './Component/forget-pass/forget-pass.component';
 import { GetallnotesComponent } from './Component/getallnotes/getallnotes.component';
 import { GettrashComponent } from './Component/gettrash/gettrash.component';
+import { LabelComponent } from './Component/label/label.component';
 import { LoginComponent } from './Component/login/login.component';
 import { MydashboardComponent } from './Component/mydashboard/mydashboard.component';
 import { RegistrationComponent } from './Component/registration/registration.component';
@@ -19,9 +20,11 @@ const routes: Routes = [
   {path:'reset-password/:token',component:ResetPasswordComponent},
   {path:'mydashboard',component:MydashboardComponent,canActivate:[AuthguardnameGuard],
   children:[
+    {path:'', redirectTo:"/mydashboard/getallnotes", pathMatch:'full' },
     {path:'getallnotes', component:GetallnotesComponent},
     {path:'gettrash', component:GettrashComponent},
-    {path:'archieve', component:ArchieveComponent}
+    {path:'archieve', component:ArchieveComponent},
+    {path:'label', component:LabelComponent}
   ]
 },
 

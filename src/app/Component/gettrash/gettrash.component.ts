@@ -24,10 +24,15 @@ export class GettrashComponent implements OnInit {
         this.notes = this.notes.filter((object: any) => {
           return object.isTrash === true;
         })
-        
+
 
       })
   }
-  
+
+  receiveMessagefromdisplaycard($event: any) {
+    console.log("insidegetallnotes", $event);
+    this.gettrash();
+
+}
 
 }

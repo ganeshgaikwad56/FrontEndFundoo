@@ -35,6 +35,7 @@ import { GettrashComponent } from './Component/gettrash/gettrash.component';
 import { ArchieveComponent } from './Component/archieve/archieve.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FilterPipe } from './Component/pipe/filter.pipe';
+import { LabelComponent } from './Component/label/label.component';
 
 
 
@@ -55,7 +56,8 @@ import { FilterPipe } from './Component/pipe/filter.pipe';
     TrashnoteComponent,
      GettrashComponent,
      ArchieveComponent,
-     FilterPipe
+     FilterPipe,
+     LabelComponent
   ],
   imports: [
     BrowserModule,
